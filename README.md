@@ -22,3 +22,14 @@ moment that shows how to use it.
   2. Read the [documentation](https://hexdocs.pm/auto_process_registry/) on how to use
   it.
 
+## License
+
+Apache 2.0
+
+## Contributing
+
+Github standard process.
+
+## Acknowledgements
+
+A lot of inspration--and, frankly, code--comes from [this article](https://medium.com/@StevenLeiva1/elixir-process-registries-a27f813d94e3#.x3wx7nfck) by Steven Leiva.
