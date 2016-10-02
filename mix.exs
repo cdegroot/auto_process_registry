@@ -10,7 +10,14 @@ defmodule AutoProcessRegistry.Mixfile do
      deps: deps(),
 
      # Docs
-     name: "Auto Process Registry"]
+     description: "A simple process registry that can instantiate new processes on the fly",
+     package: [
+      name: :auto_process_registry,
+      maintainers: ["Cees de Groot"],
+      licenses: ["Apache 2.0"],
+      links: %{"GitHub" => "https://github.com/cdegroot/auto_process_registry"}
+     ]
+    ]
   end
 
   # Configuration for the OTP application

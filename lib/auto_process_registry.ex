@@ -12,8 +12,32 @@ defmodule AutoProcessRegistry do
   make it usable for via naming lookups in the style of
   `{:via, YourRegistryModule, key}`.
 
-  Moar docs needed. I would also say moar config needed - an argument
-  to start_link that is passed to start_new.
+  Here is a quick example using agents, lifted from the test suite:
+
+      defmodule SampleModule do
+        use AutoProcessRegistry
+
+        def start_new(config, key) do
+          Agent.start_link(fn -> config * key end)
+        end
+      end
+
+      SampleModule.start_link(10)
+
+  With this module defined, it's now possible to launch processes (in
+  this case, simple agents, but it should be hard to see how to extend
+  this for `GenServer`, etcetera:
+
+      Agent.get({:via, SampleModule, 42}, fn(key) -> key end) # --> 420
+      Agent.get({:via, SampleModule, 666}, fn(key) -> key end) # --> 6660
+
+  A potential use case for this library is for example genservers that have
+  their state persisted in a database. `start_new` can be setup to read
+  data for a primary key, start a process with the state from the database,
+  and from then reading from the database basically is just done on the fly
+  by starting to talk to an instance with a certain primary key. What would
+  be neat in that case, of course, is to extend this with an LRU cache and a
+  maximum number of live processes, maybe for a later iteration.
   """
 
   @doc """

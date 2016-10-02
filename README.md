@@ -8,9 +8,8 @@ processes if a process for a key doesn't exist.
 See the module docs for more info. There's a single unit test at the
 moment that shows how to use it.
 
-## Installation
+## Usage
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
 
   1. Add `auto_process_registry` to your list of dependencies in `mix.exs`:
 
@@ -20,11 +19,6 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
     end
     ```
 
-  2. Ensure `auto_process_registry` is started before your application:
-
-    ```elixir
-    def application do
-      [applications: [:auto_process_registry]]
-    end
-    ```
+  2. Read the [documentation](https://hexdocs.pm/auto_process_registry/) on how to use
+  it.
 
