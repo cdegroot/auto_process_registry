@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/cdegroot/auto_process_registry.svg?branch=master)](https://travis-ci.org/cdegroot/auto_process_registry)
+
 # AutoProcessRegistry
 
 This small module is a process registry that can automatically start new
