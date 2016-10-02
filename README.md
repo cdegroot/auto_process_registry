@@ -3,7 +3,8 @@
 This small module is a process registry that can automatically start new
 processes if a process for a key doesn't exist.
 
-See the module docs for more info.
+See the module docs for more info. There's a single unit test at the
+moment that shows how to use it.
 
 ## Installation
 
